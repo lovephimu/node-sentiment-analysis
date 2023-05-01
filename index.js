@@ -1,6 +1,8 @@
 // LIBRARIES VARIABLES INPUT
 import { createInterface } from 'readline';
+import apiAiKey from './apiKey.js';
 
+const apiKey = apiAiKey;
 const aiUrl = 'https://monkeylearn.com/sentiment-analysis-online/';
 const userInput = process.argv.slice(2).join(' ');
 console.log(userInput);
