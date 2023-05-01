@@ -1,11 +1,12 @@
 // LIBRARIES VARIABLES INPUT
 
 import fs from 'node:fs';
+import { createInterface } from 'node:readline';
 import { Configuration, OpenAIApi } from 'openai';
-import { createInterface } from 'readline';
-import apiAiKey from './apikey.js';
 
-const apiKey = apiAiKey || undefined;
+// import apiAiKey from './apikey.js';
+
+// const apiKey = apiAiKey;
 const userInput = process.argv.slice(2).join(' ');
 console.log(userInput);
 const missionStatementOne = 'Analyze the following input for sentiment value: ';
@@ -71,9 +72,9 @@ console.log(
     colorEnd,
 );
 
-if (!apiKey) {
-  console.log('API Key not defined - please contact developer');
-}
+// if (!apiKey) {
+//   console.log('API Key not defined - please contact developer');
+// }
 
 console.log(
   colorStart +
@@ -94,13 +95,14 @@ if (msgToAi === 'SAMPLE') {
       process.exit(0);
     }
     msgToAi = data;
+    console.log(msgToAi);
   });
 }
 
 // openAi communication
 
 const configuration = new Configuration({
-  apiKey: apiKey,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 const response = await openai.createCompletion({
