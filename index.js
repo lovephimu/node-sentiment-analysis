@@ -62,11 +62,17 @@ console.log(`
 ##############################
 `);
 
-console.log(
-  `Hello, please input a word or text through command line! (Alternatively upload a text file by typing UPLOAD) \n`,
-);
+console.log(`
+Hello, please input a word or text through command line! (Alternatively upload a text file by typing UPLOAD)
+Also if you are reviewing this: please note that this isn't working online since I cannot upload my openAi API key.
+Just ask me and I'll show you the functionality\n`);
 
 const msgToAi = await startApp();
+
+if (msgToAi === 'UPLOAD') {
+  console.log('Sorry still under construction');
+  process.exit(0);
+}
 
 // openAi communication
 

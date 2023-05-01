@@ -12,5 +12,9 @@
   "type": "module",
   "dependencies": {
     "openai": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint-config-upleveled": "^4.1.8",
+    "typescript": "^5.0.4"
   }
 }
