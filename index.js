@@ -2,7 +2,6 @@
 import { createInterface } from 'readline';
 
 const aiUrl = 'https://monkeylearn.com/sentiment-analysis-online/';
-const aiApiKey = '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';
 const userInput = process.argv.slice(2).join(' ');
 console.log(userInput);
 
