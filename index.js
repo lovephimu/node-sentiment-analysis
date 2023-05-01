@@ -11,7 +11,7 @@ const userInput = process.argv.slice(2).join(' ');
 console.log(userInput);
 const missionStatementOne = 'Analyze the following input for sentiment value: ';
 const missionStatementTwo =
-  ' - first tell me if this text is more positive, negative or neutral. Secondly list the emotions and their percentage. Each list item should include the corresponding name of the emotions and an emoji that can be read in vs code terminal.';
+  ' - first tell me if this text is more positive, negative or neutral. Secondly list the emotions and their percentage. Each list item should include the corresponding name of the emotions and an emoji that can be read in vs code terminal. Also rate the confidence in the text.';
 
 const colorStart = `\x1b[38;2;0;255;127m`;
 const colorEnd = `\x1b[0m`;
